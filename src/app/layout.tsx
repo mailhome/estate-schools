@@ -1,3 +1,6 @@
+import { Footer } from "@/components/footer";
+import { HeaderNoScroll } from "@/components/headerNoScroll";
+import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
@@ -16,7 +19,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={cn("min-h-screen flex flex-col", inter.className)}>
+        <HeaderNoScroll />
+        <div className="flex flex-col items-start justify-start flex-1">
+          {children}
+        </div>
+        <Footer />
+      </body>
     </html>
   );
 }
