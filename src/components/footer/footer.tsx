@@ -1,13 +1,20 @@
+"use client"
+
 import Link from "next/link"
-import { WidthContainer } from "./width-container"
+import { WidthContainer } from "../width-container"
 import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa"
 import { FaLinkedin } from "react-icons/fa6"
-import { Input } from "./ui/input"
-import { Button } from "./ui/button"
+import { Input } from "../ui/input"
+import { Button } from "../ui/button"
+import { usePathname } from "next/navigation"
+import { cn } from "@/lib/utils"
 
 export const Footer = () => {
+    const pathname = usePathname();
+
+    const isContact = pathname === "/contact";
     return (
-        <div className="bottom-0 w-full h-auto py-8 bg-white">
+        <div className={cn("bottom-0 fixed w-full h-auto py-8 bg-white", isContact && "bg-neutral-100")}>
             <WidthContainer>
                 <div className="grid xl:grid-cols-4 lg:grid-cols-2 md:grid-cols-2 grid-cols-1 items-center justify-center gap-x-20 w-full lg:gap-y-16 md:gap-y-12 gap-y-10">
                     <div className="flex flex-col items-start justify-start 2xl:gap-y-4 xl:gap-y-4 lg:gap-y-2 md:gap-y-4 gap-y-2 text-[#8C3239] ">

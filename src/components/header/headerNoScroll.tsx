@@ -2,15 +2,15 @@
 
 import Link from "next/link"
 import { Logo } from "./logo"
-import { Button } from "./ui/button"
+import { Button } from "../ui/button"
 import { HeaderLinks } from "./header-links"
 import { PortalContents } from "./portal-content"
-import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet"
+import { Sheet, SheetContent, SheetTrigger } from "../ui/sheet"
 import { ChevronUp, Menu } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { useState } from "react"
 import { UseScrollTop } from "@/hooks/use-scroll-top"
-import { WidthContainer } from "./width-container"
+import { WidthContainer } from "../width-container"
 import { usePathname } from "next/navigation"
 
 
@@ -37,6 +37,8 @@ const mobileRoutes = [
     },
 ]
 
+
+
 export const HeaderNoScroll = () => {
     const [isMobile, setIsMobile] = useState(false);
 
@@ -44,11 +46,15 @@ export const HeaderNoScroll = () => {
 
     const scrolled = UseScrollTop();
 
+    const indexRoute = pathname === "/" && scrolled;
+
+
+
     return (
-        <div className={cn("py-5 z-50 fixed bg-white w-full", !scrolled && "bg-transparent")}>
+        <div className={cn("py-5 z-50 fixed bg-white w-full  border-b border-[#8C3239]", !scrolled && "bg-transparent border-none")}>
             <WidthContainer className="flex items-center justify-between">
                 <Logo />
-                <div className="flex items-center justify-center 2xl:gap-x-16 xl:gap-x-10 lg:gap-x-8 gap-x-6">
+                <div className="flex items-center justify-center 2xl:gap-x-24 xl:gap-x-10 lg:gap-x-8 gap-x-6">
                     <div className="hidden md:flex items-center justify-center gap-x-4">
                         {school_routes.map((route) => (
                             <Link
@@ -62,7 +68,7 @@ export const HeaderNoScroll = () => {
                         ))}
                     </div>
 
-                    <div className={cn("hidden xl:flex items-center justify-end 2xl:gap-x-12 xl:gap-x-8")}>
+                    <div className={cn("hidden xl:flex items-center justify-end 2xl:gap-x-8 xl:gap-x-8")}>
                         <HeaderLinks
                             href="/">
                             Home

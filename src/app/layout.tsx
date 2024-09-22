@@ -1,5 +1,5 @@
-import { Footer } from "@/components/footer";
-import { HeaderNoScroll } from "@/components/headerNoScroll";
+import { Footer } from "@/components/footer/footer";
+import { HeaderNoScroll } from "@/components/header/headerNoScroll";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
@@ -18,13 +18,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={cn("min-h-screen flex flex-col", inter.className)}>
-        <HeaderNoScroll />
-        <div className="flex flex-col items-start justify-start flex-1">
-          {children}
-        </div>
-        <Footer />
+    <html lang="en" suppressHydrationWarning>
+      <body className={cn("", inter.className)}>
+        {children}
       </body>
     </html>
   );

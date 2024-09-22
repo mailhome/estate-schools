@@ -1,6 +1,6 @@
 "use client"
 
-import { HeaderNoScroll } from "@/components/headerNoScroll";
+import { HeaderNoScroll } from "@/components/header/headerNoScroll";
 import { Hero } from "@/components/hero";
 
 
