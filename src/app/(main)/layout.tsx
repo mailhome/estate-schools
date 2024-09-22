@@ -8,9 +8,9 @@ interface MainLayoutProps {
 
 const MainLayout = ({ children }: MainLayoutProps) => {
     return (
-        <div className='min-h-screen flex flex-col'>
+        <div className='min-h-full flex flex-col'>
             <HeaderNoScroll />
-            <div className="flex flex-col items-start justify-start flex-1">
+            <div className="flex flex-col items-start justify-start">
                 {children}
             </div>
             <Footer />

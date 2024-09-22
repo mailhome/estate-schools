@@ -13,7 +13,7 @@ const ContactPage = () => {
                         Contact us
                     </h1>
                 </div>
-                <div className="w-full h-screen mt-32">
+                <div className="w-full h-screen 2xl:mt-32">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-x-20 ">
                         <div className="flex items-start justify-start flex-col gap-y-6">
                             <h1 className='text-xl font-[400]'>
