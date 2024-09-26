@@ -56,7 +56,7 @@ export default function ContactForm() {
                 <AlertCircle className="h-4 w-4" />
                 <AlertTitle>Success</AlertTitle>
                 <AlertDescription>
-                    Your message has been sent. We'll get back to you soon!
+                    Your message has been sent. We&apos;ll get back to you soon!
                 </AlertDescription>
             </Alert>
         )
