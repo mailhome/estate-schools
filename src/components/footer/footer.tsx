@@ -14,9 +14,9 @@ export const Footer = () => {
 
     const isContact = pathname === "/contact";
     return (
-        <div className={cn("bottom-0 w-full h-fit   bg-white", isContact && "bg-neutral-100")}>
+        <div className={cn("bottom-0 w-full  bg-white", isContact && "bg-neutral-100")}>
             <WidthContainer>
-                <div className="grid xl:grid-cols-4 lg:grid-cols-2 md:grid-cols-2 grid-cols-1 items-start justify-center gap-x-20 w-full lg:gap-y-16 md:gap-y-5 gap-y-8 2xl:py-6 xl:py-4 lg:py-4 py-2">
+                <div className="grid xl:grid-cols-4 lg:grid-cols-2 md:grid-cols-2 grid-cols-1 items-start justify-center gap-x-20 w-full lg:gap-y-16 md:gap-y-5 gap-y-8 2xl:py-6 xl:py-4 lg:py-4 py-2 2xl:-mt-40">
                     <div className="flex flex-col items-start justify-start 2xl:gap-y-4 xl:gap-y-6 lg:gap-y-2 md:gap-y-1 text-[#8C3239] ">
                         <h1 className="2xl:text-base xl:text-base lg:text-base md:text-xs text-[12px]">
                             New Estate Baptist Schools.

@@ -8,7 +8,7 @@ const ContactPage = () => {
     return (
         <div className='bg-[#DCA47C] w-full h-[30vh]'>
             <WidthContainer>
-                <div className="mt-48">
+                <div className="mt-40">
                     <h1 className='text-white font-black 2xl:text-6xl xl:text-5xl lg:text-xl md:text-3xl text-2xl'>
                         Contact us
                     </h1>
@@ -50,6 +50,7 @@ const ContactPage = () => {
                 </div>
             </WidthContainer>
         </div>
+
     )
 }
 
